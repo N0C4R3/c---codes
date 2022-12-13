@@ -14,6 +14,8 @@ int main(){
     return 0;
 }
 
+//functions can have same name if parameter are different
+
 void happyBirthday(std::string name, int age){
     std::cout << "Happy birthday to you\n";
     std::cout << "Happy birthday to you\n";
