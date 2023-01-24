@@ -6,8 +6,8 @@ struct Car{
     std::string color;
 };
 
-
-
+void printCar(Car &car);
+void paintCar(Car &car, std::string color);
 int main(){
 
     Car car1;
@@ -15,10 +15,28 @@ int main(){
 
     car1.model = "Mustang";
     car1.year = 2023;
-    car1.color = "blue";
+    car1.color = "red";
     
+    car2.model = "Corvete";
+    car2.year = 2024;
+    car2.color = "blue";
 
+    std::cout << &car1 << '\n';
 
+    paintCar(car1, "Purple");
+
+    printCar(car1);
+    printCar(car2);
 
     return 0;
+}
+
+void printCar(Car &car){
+    std::cout << &car << '\n';
+    std::cout << car.model << std::endl;
+    std::cout << car.year << std::endl;
+    std::cout << car.color << std::endl;
+}
+void paintCar(Car &car, std::string color){
+    car.color = color;
 }
